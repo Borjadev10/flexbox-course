@@ -36,7 +36,7 @@ segundo_elem = tupla[1]
 nueva_lista = lista + ['yahoo']
 remplazado = "asus"
 lista[0] = remplazado
-tupla = tupla + (6,)
+tupla += (6,)
 
 
 
