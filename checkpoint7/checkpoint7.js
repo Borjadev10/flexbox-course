@@ -8,7 +8,7 @@ function checkpoint(a, b, c, d) {
    
     let resultado = suma1 * suma2;
 
-    let mensaje = `En las operaciones con los números ${a}, ${b}, ${c} y ${d}; el resultado es:${resultado}.`;
+    let mensaje = `En las operaciones con los números ${a}, ${b}, ${c} y ${d}, el resultado es:${resultado}:`;
 
 
     if (resultado > 50) {
