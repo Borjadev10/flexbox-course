@@ -420,3 +420,102 @@ console.log(mensajeDeSaludo);
 
 El depurador de JavaScript es una herramienta poderosa para encontrar y corregir errores, entender el flujo del código, y manipular el estado durante la ejecución. Usar puntos de interrupción, evaluar expresiones, y controlar la ejecución paso a paso son técnicas esenciales para una depuración efectiva.
 
+***
+
+## Quokka.js Extension
+
+### ¿Qué es Quokka.js?
+
+Quokka.js es una herramienta de desarrollo para JavaScript y TypeScript que proporciona retroalimentación instantánea sobre el código a medida que lo escribes. Funciona como un "cuaderno de trabajo" en tiempo real, mostrando resultados y mensajes de consola directamente en el editor de código. Esto permite a los desarrolladores experimentar y probar código rápidamente sin la necesidad de ejecutar manualmente el programa.
+
+### Características de Quokka.js
+
+1. **Retroalimentación Instantánea**: Muestra resultados de expresiones y valores de variables en tiempo real.
+2. **Soporte para JavaScript y TypeScript**: Funciona con ambos lenguajes, lo que lo hace versátil.
+3. **Integración con IDEs Populares**: Se integra bien con editores como Visual Studio Code, IntelliJ IDEA, WebStorm, y otros.
+4. **Indicadores de Línea**: Utiliza indicadores visuales para mostrar resultados directamente en el editor.
+5. **Soporte para Librerías**: Permite la inclusión de librerías externas como Lodash, Moment.js, etc.
+6. **Depuración Rápida**: Facilita la depuración al mostrar errores y excepciones instantáneamente.
+
+### Instalación de Quokka.js
+
+#### En Visual Studio Code
+
+1. Abre Visual Studio Code.
+2. Ve a la pestaña de extensiones (`Ctrl + Shift + X` o `Cmd + Shift + X`).
+3. Busca "Quokka.js" y haz clic en "Install".
+
+### Uso de Quokka.js
+
+#### Ejemplo Básico
+
+1. **Crear un Nuevo Archivo**:
+   - Crea un nuevo archivo en Visual Studio Code con extensión `.js` o `.ts`.
+
+2. **Iniciar Quokka**:
+   - Abre el comando de Quokka (`Ctrl + Shift + P` o `Cmd + Shift + P`) y escribe "Quokka.js: New JavaScript File" o "Quokka.js: New TypeScript File".
+   
+3. **Escribir Código y Ver Resultados**:
+
+```javascript
+const x = 10;
+const y = 20;
+const sum = x + y;
+
+sum; // Quokka mostrará el resultado 30 aquí
+```
+
+#### Trabajando con Librerías
+
+Puedes usar librerías externas como Lodash o Moment.js. Quokka.js permite la instalación y uso de estas librerías fácilmente.
+
+```javascript
+const _ = require('lodash');
+
+const array = [1, 2, 3, 4, 5];
+const doubled = _.map(array, n => n * 2);
+
+doubled; // Quokka mostrará el resultado [2, 4, 6, 8, 10] aquí
+```
+
+### Indicadores de Línea y Retroalimentación
+
+Quokka.js utiliza indicadores visuales para proporcionar retroalimentación:
+
+- **Valores de Variables**: Muestra el valor de las variables directamente en el editor.
+- **Errores y Excepciones**: Muestra mensajes de error y excepción en la línea correspondiente.
+- **Resultado de Expresiones**: Evalúa y muestra resultados de expresiones inmediatamente.
+
+### Ventajas de Usar Quokka.js
+
+1. **Ahorro de Tiempo**: No necesitas ejecutar manualmente el programa para ver los resultados de tu código.
+2. **Aprendizaje Interactivo**: Ideal para aprender JavaScript y TypeScript, ya que puedes experimentar con el código y ver los resultados instantáneamente.
+3. **Experimentación Rápida**: Facilita la prueba de fragmentos de código pequeños y la experimentación con nuevas ideas.
+4. **Mejora en la Depuración**: Al mostrar errores instantáneamente, puedes corregir problemas de manera más eficiente.
+
+### Ejemplo Completo
+
+Aquí tienes un ejemplo más complejo que muestra cómo puedes usar Quokka.js para probar y depurar código:
+
+```javascript
+const _ = require('lodash');
+
+// Función para encontrar el promedio de un array de números
+function findAverage(numbers) {
+  if (numbers.length === 0) return 0;
+  const sum = _.sum(numbers);
+  return sum / numbers.length;
+}
+
+// Datos de prueba
+const data = [10, 20, 30, 40, 50];
+
+// Uso de la función
+const average = findAverage(data);
+
+average; // Quokka mostrará el resultado 30 aquí
+```
+
+### Resumen
+
+Quokka.js es una herramienta invaluable para desarrolladores de JavaScript y TypeScript, proporcionando retroalimentación instantánea y mejorando significativamente la productividad y la experiencia de desarrollo. Es especialmente útil para experimentar, aprender y depurar código de manera rápida y eficiente.
