@@ -332,3 +332,91 @@ console.log(activeUsers);
 ### Resumen
 
 Lodash es una biblioteca poderosa y flexible para JavaScript que facilita la manipulación de arrays, objetos, cadenas de texto y más. Al proporcionar funciones utilitarias comunes y optimizadas, ayuda a escribir código más limpio, legible y eficiente.
+
+***
+
+## Depurador / debuger
+
+### ¿Qué es el Depurador de JavaScript (JavaScript Debugger)?
+
+El depurador de JavaScript es una herramienta que te permite ejecutar y analizar el código JavaScript línea por línea, identificar errores, y entender el flujo de ejecución del programa. Los navegadores modernos como Chrome, Firefox y Edge tienen depuradores incorporados en sus herramientas de desarrollo.
+
+### ¿Por qué usar un depurador?
+
+1. **Identificación de Errores**: Permite encontrar errores y bugs en el código.
+2. **Análisis del Flujo de Ejecución**: Ayuda a entender cómo se ejecuta el código.
+3. **Evaluación de Expresiones**: Puedes evaluar variables y expresiones en tiempo real.
+4. **Manipulación del Estado**: Permite modificar el estado de las variables durante la ejecución.
+
+### Cómo Usar el Depurador de JavaScript
+
+#### Paso 1: Abrir las Herramientas de Desarrollo
+
+Para abrir el depurador, sigue estos pasos según el navegador que estés usando:
+
+- **Chrome**: Pulsa `Ctrl + Shift + I` (Windows/Linux) o `Cmd + Option + I` (Mac), y luego ve a la pestaña "Sources".
+- **Firefox**: Pulsa `Ctrl + Shift + I` (Windows/Linux) o `Cmd + Option + I` (Mac), y luego ve a la pestaña "Debugger".
+- **Edge**: Pulsa `Ctrl + Shift + I` (Windows/Linux) o `Cmd + Option + I` (Mac), y luego ve a la pestaña "Debugger".
+
+#### Paso 2: Establecer Puntos de Interrupción (Breakpoints)
+
+Los puntos de interrupción permiten pausar la ejecución del código en una línea específica para examinar el estado del programa.
+
+1. **Agregar un Punto de Interrupción**:
+   - En el depurador, navega al archivo JavaScript que deseas depurar.
+   - Haz clic en el número de línea donde deseas añadir un punto de interrupción.
+
+2. **Condiciones de Puntos de Interrupción** (Opcional):
+   - Puedes hacer clic derecho en un punto de interrupción y añadir una condición para que solo se active cuando se cumpla una condición específica.
+
+#### Paso 3: Ejecutar y Pausar el Código
+
+1. **Ejecutar el Código**:
+   - Recarga la página web o ejecuta el script. La ejecución se pausará automáticamente en los puntos de interrupción que has establecido.
+
+2. **Controles del Depurador**:
+   - **Continuar** (`Resume` o `F8`): Reanuda la ejecución del código hasta el siguiente punto de interrupción.
+   - **Paso a Paso** (`Step Over` o `F10`): Ejecuta la siguiente línea de código.
+   - **Entrar** (`Step Into` o `F11`): Entra dentro de una función llamada en la línea actual.
+   - **Salir** (`Step Out` o `Shift + F11`): Sale de la función actual.
+
+#### Paso 4: Inspeccionar Variables y Expresiones
+
+1. **Ver Variables Locales**:
+   - En el panel de depuración, puedes ver el estado de las variables locales y globales en el momento en que se pausa la ejecución.
+
+2. **Evaluar Expresiones**:
+   - Usa la consola del depurador para evaluar expresiones y ver el resultado de inmediato.
+
+3. **Modificación del Estado**:
+   - Puedes cambiar el valor de las variables directamente desde el panel de variables para probar diferentes escenarios.
+
+### Ejemplo Práctico
+
+Considera el siguiente código JavaScript:
+
+```javascript
+function saludo(nombre) {
+  let mensaje = `Hola, ${nombre}!`;
+  return mensaje;
+}
+
+let nombre = 'Carlos';
+let mensajeDeSaludo = saludo(nombre);
+console.log(mensajeDeSaludo);
+```
+
+#### Paso a Paso para Depurar:
+
+1. **Abrir Herramientas de Desarrollo**: Abre el depurador en tu navegador.
+2. **Navegar al Archivo**: En el panel "Sources" o "Debugger", encuentra el archivo donde está el código.
+3. **Agregar Puntos de Interrupción**: Haz clic en la línea donde dice `let mensaje = `Hola, ${nombre}!`;`.
+4. **Ejecutar el Código**: Recarga la página o ejecuta el script.
+5. **Examinar el Estado**: La ejecución se pausará en el punto de interrupción. Ahora puedes ver el valor de `nombre` y `mensaje` en el panel de variables.
+6. **Paso a Paso**: Usa los botones "Step Over", "Step Into", y "Step Out" para ejecutar el código línea por línea.
+7. **Modificar Variables**: En el panel de variables, intenta cambiar el valor de `nombre` a otro valor y observa cómo afecta el resultado.
+
+### Resumen
+
+El depurador de JavaScript es una herramienta poderosa para encontrar y corregir errores, entender el flujo del código, y manipular el estado durante la ejecución. Usar puntos de interrupción, evaluar expresiones, y controlar la ejecución paso a paso son técnicas esenciales para una depuración efectiva.
+
