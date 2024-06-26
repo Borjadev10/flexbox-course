@@ -229,6 +229,106 @@ let chunks = chunk(array, 2);
 console.log(chunks); // [[1, 2], [3, 4]]
 ```
 
+Claro, aquí tienes ejemplos de cómo usar las funciones `_.reduce`, `_.keyBy`, `_.random`, `_.times` y `_.filter` de Lodash en JavaScript.
+
+### 1. `_.reduce`
+
+`_.reduce` aplica una función a un acumulador y a cada elemento de un array (de izquierda a derecha) para reducirlo a un solo valor.
+
+```javascript
+const _ = require('lodash');
+
+let numbers = [1, 2, 3, 4, 5];
+
+let sum = _.reduce(numbers, (accumulator, value) => {
+  return accumulator + value;
+}, 0);
+
+console.log(sum); // 15
+```
+
+### 2. `_.keyBy`
+
+`_.keyBy` crea un objeto compuesto de claves generadas a partir de las propiedades de cada elemento de la colección.
+
+```javascript
+const _ = require('lodash');
+
+let users = [
+  { 'id': '1', 'name': 'John' },
+  { 'id': '2', 'name': 'Jane' },
+  { 'id': '3', 'name': 'Jack' }
+];
+
+let usersById = _.keyBy(users, 'id');
+
+console.log(usersById);
+/*
+{
+  '1': { 'id': '1', 'name': 'John' },
+  '2': { 'id': '2', 'name': 'Jane' },
+  '3': { 'id': '3', 'name': 'Jack' }
+}
+*/
+```
+
+### 3. `_.random`
+
+`_.random` genera un número aleatorio entre los valores inferior y superior dados, ambos inclusive.
+
+```javascript
+const _ = require('lodash');
+
+let randomNumber = _.random(1, 10);
+
+console.log(randomNumber); // Un número aleatorio entre 1 y 10
+```
+
+### 4. `_.times`
+
+`_.times` invoca la función dada n veces, devolviendo un array de los resultados de cada invocación.
+
+```javascript
+const _ = require('lodash');
+
+let result = _.times(5, String);
+
+console.log(result); // ['0', '1', '2', '3', '4']
+```
+
+### 5. `_.filter`
+
+`_.filter` crea un array con todos los elementos que pasan la prueba implementada por la función dada.
+
+```javascript
+const _ = require('lodash');
+
+let users = [
+  { 'name': 'John', 'active': true },
+  { 'name': 'Jane', 'active': false },
+  { 'name': 'Jack', 'active': true }
+];
+
+let activeUsers = _.filter(users, (user) => user.active);
+
+console.log(activeUsers); 
+/*
+[
+  { 'name': 'John', 'active': true },
+  { 'name': 'Jack', 'active': true }
+]
+*/
+```
+
+### Resumen de las Funciones
+
+- **`_.reduce`**: Reduce un array a un único valor aplicando una función a un acumulador y cada elemento del array.
+- **`_.keyBy`**: Crea un objeto compuesto de claves generadas a partir de las propiedades de cada elemento de la colección.
+- **`_.random`**: Genera un número aleatorio entre dos valores dados.
+- **`_.times`**: Invoca una función dada un número específico de veces, devolviendo un array de los resultados.
+- **`_.filter`**: Crea un array con todos los elementos que pasan la prueba implementada por una función dada.
+
+
 ### Resumen
 
 Lodash es una biblioteca poderosa y flexible para JavaScript que facilita la manipulación de arrays, objetos, cadenas de texto y más. Al proporcionar funciones utilitarias comunes y optimizadas, ayuda a escribir código más limpio, legible y eficiente.
