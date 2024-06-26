@@ -101,3 +101,134 @@
   </script>
 </html>
 ```
+
+### ¿Qué es Lodash en JavaScript?
+
+Lodash es una biblioteca de JavaScript que proporciona utilidades para tareas comunes de programación, como manipulación de arrays, objetos, cadenas de texto y otros tipos de datos. Facilita la escritura de código más limpio y eficiente, reduciendo la necesidad de implementar funciones utilitarias desde cero.
+
+### Ventajas de Usar Lodash
+
+1. **Simplicidad**: Proporciona funciones sencillas y consistentes para operaciones comunes.
+2. **Compatibilidad**: Funciona bien con todas las versiones de JavaScript y es compatible con navegadores y entornos de servidor.
+3. **Rendimiento**: Optimizado para mejorar el rendimiento en muchas operaciones comunes.
+4. **Modularidad**: Puedes importar solo las partes de la biblioteca que necesitas, reduciendo el tamaño de tu código.
+
+### Instalación
+
+Para usar Lodash en tu proyecto, puedes instalarlo a través de npm (Node Package Manager):
+
+```bash
+npm install lodash
+```
+
+O si estás usando una etiqueta de script en un HTML:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+```
+
+### Ejemplos de Uso
+
+#### 1. Manipulación de Arrays
+
+**_.chunk**: Divide un array en fragmentos más pequeños de un tamaño específico.
+
+```javascript
+const _ = require('lodash');
+let array = [1, 2, 3, 4, 5, 6];
+let chunks = _.chunk(array, 2);
+console.log(chunks); // [[1, 2], [3, 4], [5, 6]]
+```
+
+**_.difference**: Crea un array con los valores de la primer array que no están presentes en otros arrays.
+
+```javascript
+let array1 = [1, 2, 3];
+let array2 = [2, 3, 4];
+let difference = _.difference(array1, array2);
+console.log(difference); // [1]
+```
+
+#### 2. Manipulación de Objetos
+
+**_.merge**: Combina propiedades de objetos fuente en un objeto destino.
+
+```javascript
+let object1 = { 'a': 1, 'b': 2 };
+let object2 = { 'b': 3, 'c': 4 };
+let merged = _.merge(object1, object2);
+console.log(merged); // { 'a': 1, 'b': 3, 'c': 4 }
+```
+
+**_.cloneDeep**: Crea una copia profunda de un objeto.
+
+```javascript
+let obj = { 'a': 1, 'b': { 'c': 2 } };
+let clone = _.cloneDeep(obj);
+console.log(clone); // { 'a': 1, 'b': { 'c': 2 } }
+```
+
+#### 3. Manipulación de Cadenas
+
+**_.camelCase**: Convierte una cadena de texto a formato camel case.
+
+```javascript
+let text = 'hello world';
+let camelCaseText = _.camelCase(text);
+console.log(camelCaseText); // 'helloWorld'
+```
+
+**_.capitalize**: Capitaliza la primera letra de una cadena de texto.
+
+```javascript
+let text = 'hello world';
+let capitalizedText = _.capitalize(text);
+console.log(capitalizedText); // 'Hello world'
+```
+
+#### 4. Utilidades Variadas
+
+**_.debounce**: Crea una función que retrasa la ejecución de la función original hasta que haya pasado un tiempo determinado desde la última vez que se invocó.
+
+```javascript
+const debouncedFunc = _.debounce(() => {
+  console.log('Executed after 1 second of inactivity');
+}, 1000);
+
+// Ejecuta varias veces
+debouncedFunc();
+debouncedFunc();
+debouncedFunc();
+// Solo se ejecutará una vez, 1 segundo después de la última llamada
+```
+
+**_.throttle**: Crea una función que solo permite ejecutar la función original una vez cada intervalo de tiempo especificado.
+
+```javascript
+const throttledFunc = _.throttle(() => {
+  console.log('Executed once every 2 seconds');
+}, 2000);
+
+// Ejecuta varias veces
+throttledFunc();
+throttledFunc();
+throttledFunc();
+// Solo se ejecutará una vez cada 2 segundos
+```
+
+### Uso Modular
+
+Para optimizar el tamaño de tu paquete, puedes importar solo las funciones que necesitas:
+
+```javascript
+const chunk = require('lodash/chunk');
+const merge = require('lodash/merge');
+
+let array = [1, 2, 3, 4];
+let chunks = chunk(array, 2);
+console.log(chunks); // [[1, 2], [3, 4]]
+```
+
+### Resumen
+
+Lodash es una biblioteca poderosa y flexible para JavaScript que facilita la manipulación de arrays, objetos, cadenas de texto y más. Al proporcionar funciones utilitarias comunes y optimizadas, ayuda a escribir código más limpio, legible y eficiente.
