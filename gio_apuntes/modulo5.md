@@ -519,3 +519,7 @@ average; // Quokka mostrará el resultado 30 aquí
 ### Resumen
 
 Quokka.js es una herramienta invaluable para desarrolladores de JavaScript y TypeScript, proporcionando retroalimentación instantánea y mejorando significativamente la productividad y la experiencia de desarrollo. Es especialmente útil para experimentar, aprender y depurar código de manera rápida y eficiente.
+
+***
+
+## Lint tools
