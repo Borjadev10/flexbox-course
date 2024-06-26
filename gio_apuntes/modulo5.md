@@ -522,4 +522,187 @@ Quokka.js es una herramienta invaluable para desarrolladores de JavaScript y Typ
 
 ***
 
-## Lint tools
+## Lint tools (ESLint)
+
+### ¿Qué es ESLint?
+
+ESLint es una herramienta de linting para JavaScript y TypeScript. Ayuda a los desarrolladores a identificar y corregir problemas en su código, asegurando que se adhieran a ciertos estándares y convenciones de codificación. ESLint es altamente configurable, lo que permite a los desarrolladores definir reglas específicas que se ajusten a sus necesidades y preferencias de codificación.
+
+### ¿Por Qué Usar ESLint?
+
+1. **Detección de Errores**: Encuentra errores en el código antes de que se conviertan en problemas más grandes.
+2. **Consistencia**: Mantiene el código consistente aplicando reglas de estilo y convenciones.
+3. **Mejora de la Legibilidad**: Un código limpio y consistente es más fácil de leer y mantener.
+4. **Facilita la Colaboración**: Al seguir un conjunto común de reglas, el código es más comprensible para todos los miembros del equipo.
+5. **Automatización**: Automatiza la revisión del código, permitiendo a los desarrolladores centrarse en tareas más complejas.
+
+### Instalación de ESLint
+
+Para instalar ESLint, necesitas tener Node.js y npm (Node Package Manager) instalados. Luego, puedes instalar ESLint globalmente o localmente en tu proyecto.
+
+#### Instalación Local
+
+```bash
+npm install eslint --save-dev
+```
+
+#### Instalación Global
+
+```bash
+npm install -g eslint
+```
+
+### Configuración de ESLint
+
+Después de instalar ESLint, necesitas configurarlo para tu proyecto. Puedes crear un archivo de configuración de ESLint manualmente o usar el asistente de configuración.
+
+#### Asistente de Configuración
+
+El asistente de configuración de ESLint te guía a través de la configuración inicial. Para iniciar el asistente, ejecuta:
+
+```bash
+npx eslint --init
+```
+
+El asistente te hará una serie de preguntas para configurar ESLint de acuerdo con tus necesidades. Por ejemplo, te preguntará si deseas usar ESLint para verificar errores, aplicar estilo de código o ambos, y si deseas usar un archivo de configuración JSON, YAML o JavaScript.
+
+#### Archivo de Configuración Manual
+
+Puedes crear un archivo `.eslintrc.json`, `.eslintrc.yml` o `.eslintrc.js` en la raíz de tu proyecto. Aquí tienes un ejemplo de un archivo de configuración JSON básico:
+
+```json
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-unused-vars": "warn",
+    "semi": ["error", "always"],
+    "quotes": ["error", "double"]
+  }
+}
+```
+
+### Uso de ESLint
+
+#### Ejecutar ESLint en tu Código
+
+Para ejecutar ESLint en tus archivos JavaScript, usa el siguiente comando:
+
+```bash
+npx eslint yourfile.js
+```
+
+Puedes especificar múltiples archivos o usar patrones glob para analizar varios archivos a la vez:
+
+```bash
+npx eslint src/**/*.js
+```
+
+#### Integración con Editores de Código
+
+ESLint se integra bien con muchos editores de código populares, proporcionando retroalimentación en tiempo real mientras escribes código.
+
+##### Visual Studio Code
+
+1. Instala la extensión de ESLint desde el marketplace de Visual Studio Code.
+2. Asegúrate de tener un archivo de configuración de ESLint en tu proyecto.
+3. La extensión de ESLint analizará tu código automáticamente y mostrará errores y advertencias.
+
+##### WebStorm
+
+1. WebStorm tiene soporte incorporado para ESLint.
+2. Asegúrate de tener un archivo de configuración de ESLint en tu proyecto.
+3. WebStorm analizará tu código automáticamente y mostrará errores y advertencias.
+
+### Ejemplos de Reglas de ESLint
+
+ESLint viene con un conjunto de reglas predeterminadas que puedes personalizar según tus necesidades. Aquí hay algunos ejemplos de reglas comunes:
+
+#### `no-unused-vars`
+
+Detecta variables declaradas pero no utilizadas.
+
+```json
+{
+  "rules": {
+    "no-unused-vars": "warn"
+  }
+}
+```
+
+#### `semi`
+
+Asegura que las declaraciones terminen con un punto y coma.
+
+```json
+{
+  "rules": {
+    "semi": ["error", "always"]
+  }
+}
+```
+
+#### `quotes`
+
+Enforce consistent use of either single or double quotes.
+
+```json
+{
+  "rules": {
+    "quotes": ["error", "double"]
+  }
+}
+```
+
+### Uso de Plugins y Extensiones
+
+ESLint permite usar plugins para ampliar su funcionalidad. Por ejemplo, puedes usar el plugin de React para aplicar reglas específicas de React:
+
+#### Instalación del Plugin de React
+
+```bash
+npm install eslint-plugin-react --save-dev
+```
+
+#### Configuración del Plugin de React
+
+Agrega el plugin a tu archivo de configuración de ESLint:
+
+```json
+{
+  "plugins": ["react"],
+  "rules": {
+    "react/jsx-uses-react": "warn",
+    "react/jsx-uses-vars": "warn"
+  }
+}
+```
+
+### Automatización con Scripts de npm
+
+Puedes agregar ESLint a tus scripts de npm para ejecutarlo fácilmente durante el desarrollo o antes de los commits.
+
+#### Agregar un Script de Lint a `package.json`
+
+```json
+"scripts": {
+  "lint": "eslint src/**/*.js"
+}
+```
+
+Luego, puedes ejecutar ESLint con:
+
+```bash
+npm run lint
+```
+
+### Resumen
+
+ESLint es una herramienta poderosa para mantener la calidad y consistencia del código JavaScript y TypeScript. Ayuda a detectar errores, aplicar reglas de estilo, y mejorar la legibilidad del código. Con su alta configurabilidad y amplio soporte de plugins, ESLint se puede adaptar a las necesidades específicas de cualquier proyecto y equipo de desarrollo. Integrarlo en tu flujo de trabajo mejorará significativamente tu experiencia de desarrollo y la calidad del código.
