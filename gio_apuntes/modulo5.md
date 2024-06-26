@@ -1,7 +1,7 @@
 # Modulo 5
 
 ## Lodash
-
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -35,6 +35,6 @@
     });
   </script>
 </html>
-
+```
 
 
