@@ -971,4 +971,6 @@ prettyPrice(2.2, 99); //?
   </script>
 </html>
 ```
+***
+## ES6 Project Generator
 
