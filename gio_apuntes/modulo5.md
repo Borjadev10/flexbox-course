@@ -896,4 +896,7 @@ prettyPrice(2.2, 99); //?
   </script>
 </html>
 ```
+## Create a Custom Error Class 
+
+
 
