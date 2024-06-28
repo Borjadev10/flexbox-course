@@ -865,3 +865,35 @@ prettyPrice(2.2, 95); //?
 prettyPrice(2.2, 0); //?
 prettyPrice(2.2, 99); //?
 ```
+## Errores en javascrip y capturarlos
+[devcamp](https://basque.devcamp.com/pt-full-stack-development-javascript-python-react/guide/basic-error-management-syntax-javascript)
+
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Basic Error</title>
+  </head>
+  <body>
+
+  </body>
+
+  <script>
+    function siteComponent(func) {
+      return func();
+    }
+    widget = () => {
+      return '<div>Hi there</div>';
+    }
+    try {
+      console.log(siteComponent('oops'));
+    } catch(e) {
+      console.log('An error occurred', e);
+    }
+    console.log(siteComponent(widget)); //si cambiamos widget(la funcion por una cadena salta el error)
+  </script>
+</html>
+```
+
