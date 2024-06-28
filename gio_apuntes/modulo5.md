@@ -1,5 +1,7 @@
 # Modulo 5
 
+[curso intersante](https://www.youtube.com/watch?v=38Q8uw0rbOU&list=PLRM7PpbqqStK4JPmAGtEbTIC9xHU6sOeM)
+
 ## Lodash parte 1 ( times / filter )
 ```html
 <!DOCTYPE html>
