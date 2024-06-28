@@ -850,3 +850,18 @@ Integrar ESLint en Visual Studio Code es una excelente manera de mejorar la cali
 
 ***
 
+## Pretty Price Method
+
+```javascrip
+const prettyPrice = (grossPrice, extension) => {
+  if (Number.isInteger(extension)) {
+    extension = extension * 0.01;
+  }
+  return Math.floor(grossPrice) + extension;
+};
+
+prettyPrice(2.2, 0.95); //?
+prettyPrice(2.2, 95); //?
+prettyPrice(2.2, 0); //?
+prettyPrice(2.2, 99); //?
+```
